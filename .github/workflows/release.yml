@@ -89,9 +89,9 @@ jobs:
       - name: rename files
         run: |
           mv ./libserver-amd64.so/server.so ./libserver-amd64.so/libserver-amd64.so
-          mv ./libclient-amd64.so/server.so ./libclient-amd64.so/libclient-amd64.so
+          mv ./libclient-amd64.so/client.so ./libclient-amd64.so/libclient-amd64.so
           mv ./libserver-arm64.so/server.so ./libserver-arm64.so/libserver-arm64.so
-          mv ./libclient-arm64.so/server.so ./libclient-arm64.so/libclient-arm64.so
+          mv ./libclient-arm64.so/client.so ./libclient-arm64.so/libclient-arm64.so
           
 
       - name: Release
