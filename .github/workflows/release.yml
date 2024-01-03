@@ -90,8 +90,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ./libserver-amd64.so
-            ./libclient-amd64.so
-            ./libserver-arm64.so
-            ./libclient-arm64.so
+            ./libserver-amd64.so/libserver-amd64.so
+            ./libclient-amd64.so/libclient-amd64.so
+            ./libserver-arm64.so/libserver-arm64.so
+            ./libclient-arm64.so/libclient-arm64.so
           tag_name: ${{ steps.tag.outputs.tag }}
