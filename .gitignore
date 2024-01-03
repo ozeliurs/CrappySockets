@@ -1,0 +1,4 @@
+cmake-build-debug
+libclient.so
+libserver.so
+.idea
