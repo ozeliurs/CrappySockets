@@ -1,10 +1,10 @@
 libs: libclient.so libserver.so
 
 libclient.so:
-	gcc -shared -o libclient.so -fPIC client.c
+	gcc -fPIC -shared -o libclient.so -fPIC client.c
 
 libserver.so:
-	gcc -shared -o libserver.so -fPIC server.c
+	gcc -fPIC -shared -o libserver.so -fPIC server.c
 
 main_client: libs
 	gcc -o main_client main_client.c -L. -lclient
@@ -18,4 +18,4 @@ test: main
 	./main_client & ./main_server
 
 clean:
-	rm libserver.so libclient.so main_client main_server
+	rm -f libserver.so libclient.so main_client main_server
