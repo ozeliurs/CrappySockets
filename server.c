@@ -58,30 +58,3 @@ int getmsg(char msg_read[1024]) {
 
     return bytes_read;
 }
-
-int main() {
-    int port = 12345; // Example port number
-
-    // Example usage
-    if (startserver(port) == -1) {
-        fprintf(stderr, "Failed to start server\n");
-        exit(EXIT_FAILURE);
-    }
-
-    char received_msg[1024];
-    int bytes_read = getmsg(received_msg);
-
-    if (bytes_read == -1) {
-        fprintf(stderr, "Error receiving message\n");
-        exit(EXIT_FAILURE);
-    }
-
-    printf("Received message from client: %s\n", received_msg);
-
-    if (stopserver() == -1) {
-        fprintf(stderr, "Failed to stop server\n");
-        exit(EXIT_FAILURE);
-    }
-
-    return 0;
-}
